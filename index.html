@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converter</title>
+  <link type="text/CSS" rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class = "header">
+    <h1 class="header__logo-text">
+      Перевод единиц измерения
+    </h1>
+  </header>
+  <main>
+    <div class="converter">
+      <div class="converter-field">
+        <label for="parameter-selector" class="field-label">Физическая величина:</label>
+        <select name="parameter-selector" id="parameter-selector">
+          <option>угол</option>
+          <option>сила</option>
+          <option>скорость</option>
+        </select>
+      </div>
+      <div class="converter-field">
+        <label for="from-unit" class="field-label">Переконвертировать:</label>
+        <select name="from-unit">
+          <option>° (градус)</option>
+          <option>' (минута)</option>
+          <option>'' (секунда)</option>
+        </select>
+        <label for="to-unit" class="to-unit-label">в</label>
+        <select name="to-unit">
+          <option>° (градус)</option>
+          <option>' (минута)</option>
+          <option>'' (секунда)</option>
+        </select>
+        <button class="reverse-btn"></button>
+      </div>
+      <div class="converter-field">
+        <label for="original-value" class="field-label">Исходное значение:</label>
+        <input type="number" name="original-value" class="number" />
+      </div>
+      <div class="converter-field">
+        <label for="output" class="field-label">Результат:</label>
+        <input type="number" name="output" class="number" readonly />
+        <button class="remember-btn">Запомнить</button>
+      </div>
+      <!-- <p class="output">Результат:<span class="output-field" id="output-value"></span><button class="remember-btn"></button></p> -->
+      <div class="converter-field">
+        <label for="text-representation" class="field-label">Текстовое представление:</label>
+        <input type="text" name="text-representation" class="text" />
+      </div>
+      <div class="center">
+        <div class="wrapper">
+          <label for="clipboard:" class="field-label">Буфер обмена:</label>
+          <textarea name="clipboard" class="clipboard"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="area" contenteditable="true">1 sm<sup>2</sup>=100 mm<sup>2</sup></div>
+	<p id="p">Example: <i>italic</i> and <b>bold</b></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
